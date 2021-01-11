@@ -1,0 +1,28 @@
+5min przed skryptem od faktur
+sprawdzanie wz czy obcy/amnris jeśli znajdzie indeks
+
+gen fv0
+
+f0 sprawdzić gdzie anris/obce + koszty
+
+wz jeśłi przedpłata idzie dalej
+
+-sprawdzanie czy przedpłata a nie ma potwierdzenia powaidomienie mailem do opiekunahandlowcowi
+-jesli FV eksportowa + sprawdzanie euronipu(ma robert) na pozytywnie(czy był sprawdzony tego dnia ,jeśli nie to sprawdzić)
+	zgłosić sprawdzanie euronipu i zapisywać weryfikacja przez api) bufor
+-na wz czy ma potwierdzenie płatności
+-----------płatności (jeśli jest płatność- formapłatnościi) idzie dalej (apo robert)czy jest opłącona
+-----------jeśli przelew  idzie , 
+
+
+jak COŚ w 'uwagi dla fakturzystek' nie zamyka 
+faktura zbiorcza nie zamyka + wd waktura zbiorcza (nie ma w buforze)
+jak faktura 'odbiór własny' nie zamkniete bo nie ma płatności na WZ bufor
+karta klienta pozostałe dane wysyłka faktury w formacie ze słownika jeśi nie puste nie zamyka
+
+
+wysyłka zmiana statusu na 'do wysyłki'
+
+
+
+

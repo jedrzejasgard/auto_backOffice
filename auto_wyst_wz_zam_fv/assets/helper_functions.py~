@@ -1,0 +1,9 @@
+import datetime
+
+def today():
+    """
+    Zwraca dzisiejszą datę w formacie RRRR-MM-DD
+    """
+    a = datetime.date.today()
+    b = a + datetime.timedelta(-3)
+    return b.strftime('%Y-%m-%d')

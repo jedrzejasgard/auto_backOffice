@@ -1,0 +1,30 @@
+#+latex_header: \hypersetup{colorlinks=true, linkcolor=black}
+#+TITLE: Specyfikacja generatora FV
+
+* DONE Sprawdzenie czy dzień wywołania skryptu jest ostatnim dniem miesiąca
+  Funckja statyczna, zwraca True jeżeli podane w argumentach daty różnią się miesiącami.
+* DONE Pobranie listy dokumentów
+* DONE Określenie parametrów dokumentu
+
+  1. Czy jest zamknięty - posiada parametr Zamknięty=True
+  2. Czy jest zafakturowany - jeśli jest zafakturowany to nie można wystawić kolejnej FV
+
+* TODO Testy
+  
+  Aplikacja pobierze zdefiniowane dokumentu wśród których są:
+  - dokument otwarty niezafakturowany
+  - dokument zamknięty niezafakturowany
+  - dokument otwarty zafakturowany
+  - dokuemnt zamknięty zafakturowany
+
+** Testy
+*** DONE Dokument WZ zamknięty, zafakturowany
+     - dokuement powienien zostać pominięty 
+*** TODO Dokument WZ zamknięty, niezafakturowany
+     - dokumentu powinien zostać zafakturowany
+*** DONE Dokumenty WZ otwarty zafakturowany
+     - dokument powinien zostać pominięty
+*** TODO Dokument WZ otwarty niezafakturowany
+     - dokument powienien zostać pominięty
+*** DONE Dokument WZ otwarty nie zafakturowany - koniec miesiąca
+     - dokument powinien zostać zafakturowany

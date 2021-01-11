@@ -1,0 +1,48 @@
+#+latex_header: \hypersetup{colorlinks=true, linkcolor=black}
+#+TITLE: Automatyczne fakturowanie dokumentów WZ.
+
+* Cel
+  
+  Zautomatyzowanie wystawnia dokumentów fakturowych w celu ułatwienia i przyspieszenia pracy osób fakturujących.
+  
+* Schemat działania
+  
+  Magazynier po skompletowaniu towaru zamyka WZ. Skrypt co 15 minut iteruje przez zamknięte dokumenty WZ, sprawdza czy
+  dokument został już zafakturowany. Jeżeli tak to go pomija jeżeli nie to generuje otwarty dokument FV.  Jeżeli dzień
+  wywołania skryptu jest ostatnim dniem miesiąca to skrypt iteruje również przez otwarte dokumenty WZ, sprawdza czy
+  dokument został już zafakturowany. Jeżeli tak to go pomija, jeżeli nie to generuje otwarty dokument FV.
+
+* Specyfikacja techniczna
+  
+  - cyklicznośc uruchomienia: 15 min.
+  - miejsce uruchomienia: serwer z windows / lub dowolny serwer z instalacją python3
+  - wymagane biblioteki: requests, ASGARD_API
+
+* Do zrobienia
+** TODO Skrypt do fakturowania WZ
+   Dopisać do nowego api skrypt do fakturowania WZ
+   [[file:specyfikacja_techniczna.org][Specyfikacja techniczna skryptu
+]]
+** TODO Stan WZ 
+   Poszujać sposobu na zdefiniowanie czy WZ posiada FV
+** TODO EURONIP
+
+   Jak przeprowadzić sprawdzanie EURONIPU przy przed wygenerowaniem FV
+   [info] Fakturzystki sprawdzają EURONIP na FV
+   [?] Dlaczego EURONIP sprawdzany jest na samym końcu zamówienia zamiast na ZO, 
+   przed rozpoczęciem zlecenia.
+
+** TODO Podwóje fakturowanie WZ
+   Czy można ponownie zafakturować zafakturowany dokument WZ
+** TODO Edycja otwartej FV przez dwie osoby jednocześnie
+   Sprawdzić jak zachowa się system gdy dwie osoby będą edytowały otwarty dokumentu FV
+** TODO Ostatni dzień miesiąca
+   Na koniec miesiąca faktury muszę zostać wystawione do otwartych dokumentów WZ
+** TODO Problem jedej FV do wielu WZ
+   Rozwiązać problem sytuacji gdy klient z chce jedną fakturę do wielu WZ. Wg schematu system wystawi tyle faktur ile ma
+   WZ.
+** TODO Wartości dowolne na FV
+   Na FV muszę być utworzone wartości dowolne z których osoby fakturujące korzystają przy generowaniu FV z WZ.
+** TODO Cron 15 min
+   Skrypt wykonywać się będzie co 15 min.
+

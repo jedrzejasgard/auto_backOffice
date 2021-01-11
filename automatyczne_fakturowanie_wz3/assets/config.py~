@@ -1,0 +1,5 @@
+API_CONFIG = { 'api_url': 'http://localhost:82',
+               'api_user': 'esklep',
+               'api_user_pswd': 'e12345',
+               'v_user': 'stronawww',
+               'v_user_pswd': 's12345'}
